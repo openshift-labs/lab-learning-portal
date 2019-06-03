@@ -1,7 +1,7 @@
 ---
 Title: Learning Portal
 PrevPage: 01-workshop-spawner
-NextPage: ../finish
+NextPage: 03-spawner-deployment
 ---
 
 The different configurations supported by the workshop spawner provide different capabilities and behaviour. The sections below go into more details about different aspects of how the `learning-portal` configuration works so it can be compared to other configurations. By comparing these to other configurations you can determine if this configuration is the best one for the type of workshop you want to run.

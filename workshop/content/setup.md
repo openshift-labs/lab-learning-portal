@@ -14,7 +14,13 @@ oc login
 
 Supply credentials corresponding to an account with cluster admin access rights.
 
-To check that you are logged in correctly and will be able to create the resources which need cluster admin access rights, run:
+Ensure that the project context is set to the same project where this workshop is deployed by running:
+
+```execute
+oc project %project_namespace%
+```
+
+To check that you will be able to create the resources which need cluster admin access rights, run:
 
 ```execute
 oc auth can-i create clusterroles
