@@ -1,7 +1,7 @@
 ---
 Title: Spawner Deployment
 PrevPage: 02-learning-portal
-NextPage: ../finish
+NextPage: 04-user-environment
 ---
 
 Deployment of the workshop spawner is performed using an OpenShift template. To deploy the workshop spawner using the `learning-portal` configuration, with the base image for the workshop dashboard as an example, run:

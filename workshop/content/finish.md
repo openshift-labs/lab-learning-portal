@@ -1,7 +1,7 @@
 ---
 Sort: 3
 Title: Workshop Summary
-PrevPage: exercises/02-learning-portal
+PrevPage: exercises/04-user-environment
 ExitSign: Finish Workshop
 ---
 
