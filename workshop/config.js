@@ -11,7 +11,7 @@ var google_analytics = `
 `;
 
 var config = {
-    site_title: 'Leaning Portal',
+    site_title: 'Learning Portal',
 
     // analytics: google_analytics,
 

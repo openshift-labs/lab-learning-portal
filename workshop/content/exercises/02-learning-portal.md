@@ -1,14 +1,14 @@
 ---
-Title: Leaning Portal
+Title: Learning Portal
 PrevPage: 01-workshop-spawner
 NextPage: ../finish
 ---
 
-The different configurations supported by the workshop spawner provide different capabilities and behaviour. The sections below go into more details about different aspects of how the `leaning-portal` configuration works so it can be compared to other configurations. By comparing these to other configurations you can determine if this configuration is the best one for the type of workshop you want to run.
+The different configurations supported by the workshop spawner provide different capabilities and behaviour. The sections below go into more details about different aspects of how the `learning-portal` configuration works so it can be compared to other configurations. By comparing these to other configurations you can determine if this configuration is the best one for the type of workshop you want to run.
 
 #### User Access
 
-Anyone can access the workshop environment at any time. A unique workshop environment will be created for each user, using a temporary service account for the user, and a separate project namespace to work in.
+Anyone can access the workshop environment at any time without needing to provide any access credentials. A unique workshop environment will be created for each user, using a temporary service account for the user, and a separate project namespace to work in.
 
 #### Shell Terminal
 
@@ -36,7 +36,7 @@ When the user session expires, the project namespace is automatically deleted.
 
 The user does not have any cluster admin access rights.
 
-Specific workshops may provide custom configuration for the spawner to give additional roles to the service account for the user. It is not recommended though to use this to give uses any roles that would normally be performed by a cluster admin. This is because it is a shared OpenShift cluster and users could interfere with each other, or the cluster control plane.
+Specific workshops may provide custom configuration for the spawner to give additional roles to the service account for the user. It is not recommended though to use this to give users any roles that would normally be performed by a cluster admin. This is because it is a shared OpenShift cluster and users could interfere with each other, or the cluster control plane.
 
 #### Resource Quotas
 
@@ -46,7 +46,7 @@ The spawner can be configured for a specific workshop to set different size reso
 
 #### User Storage
 
-The local file system accessible from the terminal is ephemeral. It is not possible to add persistent storage for container the terminal is running in.
+The local file system accessible from the terminal is ephemeral. It is not possible to add persistent storage for the container the terminal is running in.
 
 #### Session Timeout
 
