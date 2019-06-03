@@ -28,7 +28,7 @@ The user will only be able to perform actions based on the default rule set appl
 
 Each user is given access to a single project namespace. This is created automatically when the workshop environment is setup for their session.
 
-Specific workshops may provide custom configuration for the spawner to have the spawner create additional resources in the users project namespace. This can include deploying applications.
+Specific workshops may provide custom configuration for the spawner to have the spawner pre-create additional resources in the users project namespace. This can include deploying applications.
 
 When the user session expires, the project namespace is automatically deleted.
 
@@ -36,7 +36,7 @@ When the user session expires, the project namespace is automatically deleted.
 
 The user does not have any cluster admin access rights.
 
-Specific workshops may provide custom configuration for the spawner to give additional roles to the service account for the user. It is not recommended though to use this to give users any roles that would normally be performed by a cluster admin. This is because it is a shared OpenShift cluster and users could interfere with each other, or the cluster control plane.
+Specific workshops may provide custom configuration for the spawner to give additional roles to the service account for the user. It is not recommended though to use this to give users any roles that would normally be performed by a cluster admin. This is because it is a shared OpenShift cluster and users could interfere with each other, the workshop environment, or the cluster control plane.
 
 #### Resource Quotas
 
