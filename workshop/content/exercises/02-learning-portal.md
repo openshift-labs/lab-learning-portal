@@ -50,7 +50,7 @@ The local file system accessible from the terminal is ephemeral. It is not possi
 
 #### Session Timeout
 
-By default the session timeout is set to one hour, after which the workshop environment for a user will be automatically deleted. The workshop environment will also be deleted if the user closes the browser window or their computer goes to sleep. The maximum time allowed can be overridden for workshops that need more (or less) time.
+By default the session timeout is set to one hour, after which the workshop environment for a user, including their project namespace, will be automatically deleted. The workshop environment will also be deleted if the user closes the browser window or their computer goes to sleep. The maximum time allowed can be overridden for workshops that need more (or less) time.
 
 #### Spawner Admin
 

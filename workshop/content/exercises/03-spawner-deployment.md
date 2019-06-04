@@ -17,7 +17,7 @@ oc new-app https://raw.githubusercontent.com/openshift-labs/workshop-spawner/mas
   --param RESOURCE_BUDGET=medium
 ```
 
-This is just an example. You would need to use the image for the workshop you would want to run, and customize the options as necessary for the workshop. We will though use this example to explore the settings you can use.
+This is just an example. You would need to use the image for the workshop you would want to run, and customize the options as necessary for the workshop. We will though use this example to explore the settings you can use and what is created.
 
 Before we can try the workshop environment you have just deployed, check that the deployment has completed by running:
 
