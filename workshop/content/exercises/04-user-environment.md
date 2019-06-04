@@ -1,7 +1,7 @@
 ---
 Title: User Environment
 PrevPage: 03-spawner-development
-NextPage: ../finish
+NextPage: 04-workshop-images
 ---
 
 When a user accesses the URL for the spawner, with the `learning-portal` configuration they will not be prompted for any login credentials. Instead, anonymous access is allowed and a user name will be generated for them.
