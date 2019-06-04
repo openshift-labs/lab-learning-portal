@@ -4,28 +4,23 @@ PrevPage: 02-learning-portal
 NextPage: 04-user-environment
 ---
 
-Deployment of the workshop spawner is performed using an OpenShift template. To deploy the workshop spawner using the `learning-portal` configuration, with the base image for the workshop dashboard as an example, run:
+Deployment of the workshop spawner is performed using an OpenShift template. To deploy the workshop spawner using the `learning-portal` configuration, and the default workshop image, run:
 
 ```execute
 oc new-app https://raw.githubusercontent.com/openshift-labs/workshop-spawner/master/templates/learning-portal-production.json \
-  --param TERMINAL_IMAGE=quay.io/openshiftlabs/workshop-dashboard:2.11.0 \
-  --param PROJECT_NAME=%project_namespace% \
-  --param APPLICATION_NAME=portal \
-  --param SERVER_LIMIT=8 \
-  --param IDLE_TIMEOUT=300 \
-  --param MAX_SESSION_AGE=3600 \
-  --param RESOURCE_BUDGET=medium
+  --param PROJECT_NAME=`oc project --short` \
+  --param APPLICATION_NAME=portal
 ```
 
-This is just an example. You would need to use the image for the workshop you would want to run, and customize the options as necessary for the workshop. We will though use this example to explore the settings you can use and what is created.
+This is a bare bones example. You would need to use the image for the workshop you would want to run, and customize the options as necessary for the workshop. The name of the workshop image to use and any options, can be supplied using additional template parameters.
 
-Before we can try the workshop environment you have just deployed, check that the deployment has completed by running:
+The one required template parameter is that for `PROJECT_NAME`, being the name of the project the deployment is being made to. The name of the deployment is given by `APPLICATION_NAME` and defaults to `portal` if not set.
+
+Before you try the workshop environment you have just deployed, check that the deployment has completed by running:
 
 ```execute
 oc rollout status dc/portal
 ```
-
-The name "portal" corresponds to what you would supply to `APPLICATION_NAME` in the template parameters.
 
 When the deployment is done, run:
 
