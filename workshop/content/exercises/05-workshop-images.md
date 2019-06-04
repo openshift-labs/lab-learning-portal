@@ -52,3 +52,19 @@ oc tag quay.io/openshiftlabs/lab-workshop-content:1.0 portal-app:latest
 Return to the browser window for the workshop environment created by the workshop spawner. Click on the menu top right of the dashboard, select "Restart Session" and confirm that a restart should be done when the popup is displayed.
 
 When this is done the current session for the user will be shutdown and a new session will be created using the new workshop image. You should see that the identifier used for the user name has changed. This is because a new workshop environment and project namespace will be provisioned. The prior workshop environment and project namespace will be deleted in the background.
+
+This ability to update the image stream with a new image can be used in conjunction with an image build, with the newly built image replacing the existing one for the next session which is started. This is useful when developing workshop content, as the project  namespace will be thrown away each time, meaning you don't need to manually delete anything created by the workshop.
+
+To setup such a workflow, in the directory where you have the workshop content you are working on, first create a binary build with name matching the `-app` image stream for the deployment.
+
+```
+oc new-build --binary --name portal-app
+```
+
+Each time you want to update the workshop image, you can then run:
+
+```
+oc start-build portal-app --from-dir . --follow
+```
+
+Once the build is complete, restart the workshop session.
